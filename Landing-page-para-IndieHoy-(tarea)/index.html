@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <title>Mantente al dia con lo que te gusta!</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="languaje" content="es" />
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+
+  <body>
+    <header>
+      <img src="img/logo-indiehoy.png" alt="Logo IndieHoy" class="logo" />
+    </header>
+
+    <section class="portada">
+      <div class="fondo">
+        <img src="img/lolla desktop.png" alt="Fondo1" class="imagen-fondo" />
+        <img src="img/bocas desktop.png" alt="Fondo2" class="imagen-fondo" />
+        <img src="img/feria desktop.jpg" alt="Fondo3" class="imagen-fondo" />
+      </div>
+
+      <div class="Arriba">
+        <h1>Mantente al dia con lo que pasa cerca tuyo!</h1>
+
+        <p>
+          Suscríbete a nuestro Newsletter y recibirás contenido en base a tus
+          gustos e intereses.
+        </p>
+
+        <button class="boton-uno" id="abrir">NO QUIERO PERDERME NADA</button>
+
+        <div class="overlay-pop" id="overlay-pop"></div>
+
+        <div class="popup" id="popup">
+          <button class="cerrar" id="cerrar">X</button>
+          <div class="popup-contenido" id="form">
+            <h3>Únete a nuestro Newsletter</h3>
+            <p>
+              Recibe información sobre eventos, música y más, todo adaptado a
+              tus intereses, directamente en tu correo.
+            </p>
+
+            <form id="form">
+              <div class="nombre">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" required="true" />
+              </div>
+              <div class="mail">
+                <label for="mail">Mail:</label>
+                <input type="text" name="mail" id="mail" required="true" />
+              </div>
+              <div class="ciudad">
+                <div id="ciudadeinfo">
+                  <label for="ciudad">Ciudad:</label>
+
+                  <div class="contenedor-info">
+                    <input type="checkbox" id="info" class="info-checkbox" />
+                    <label for="info" class="info-boton">
+                      <img
+                        src="img/informacion.png"
+                        alt="Icono de informacion"
+                        class="clickable-image"
+                      />
+                    </label>
+                    <div class="overlay" id="overlay">
+                      <div class="info-contenido">
+                        <p>
+                          Se pide para enviarte alertas<br />
+                          de eventos cercanos (hasta<br />50Km) a la ciudad que
+                          pongas.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <select name="ciudades" id="ciudades" required="true">
+                  <option value="">Selecciona una ubicación...</option>
+                  <option value="Buenos Aires">Buenos Aires</option>
+                  <option value="Córdoba">Córdoba</option>
+                  <option value="Rosario">Rosario</option>
+                  <option value="Mendoza">Mendoza</option>
+                  <option value="Tucumán">Tucumán</option>
+                  <option value="La Plata">La Plata</option>
+                  <option value="Mar del Plata">Mar del Plata</option>
+                  <option value="Salta">Salta</option>
+                </select>
+              </div>
+
+              <label for="intereses">¿Cuales son tus intereses?</label>
+
+              <div id="intereses">
+                <div class="check">
+                  <input type="checkbox" name="recitales" class="opciones" />
+                  <label for="checkbox1">Recitales</label>
+                </div>
+                <div class="check">
+                  <input type="checkbox" name="historias" class="opciones" />
+                  <label for="checkbox2">Historias</label>
+                </div>
+                <div class="check">
+                  <input type="checkbox" name="entrevistas" class="opciones" />
+                  <label for="checkbox3">Entrevistas</label>
+                </div>
+                <div class="check">
+                  <input type="checkbox" name="peliculas" class="opciones" />
+                  <label for="checkbox4">Peliculas</label>
+                </div>
+                <div class="check">
+                  <input type="checkbox" name="series" class="opciones" />
+                  <label for="checkbox5">Series</label>
+                </div>
+                <div class="check">
+                  <input type="checkbox" name="libros" class="opciones" />
+                  <label for="checkbox6">Libros</label>
+                </div>
+                <div class="check">
+                  <input type="checkbox" name="arte" class="opciones" />
+                  <label for="checkbox7">Arte</label>
+                </div>
+                <div class="check">
+                  <input type="checkbox" name="comics" class="opciones" />
+                  <label for="checkbox8">Comics</label>
+                </div>
+              </div>
+
+              <input type="submit" id="enviar" value="ENVIAME EL NEWSLETTER" />
+            </form>
+          </div>
+
+          <div class="feedback oculto" id="feedback">
+            <h1>
+              ¡Gracias por suscribirte, <span id="nombre-placeholder"></span>!
+            </h1>
+            <p>
+              Te mantendremos al tanto de las últimas noticias y eventos. Pronto
+              recibirás un correo de confirmación en
+              <span id="mail-placeholder"></span>.
+            </p>
+            <p>Estamos emocionados de tenerte con nosotros</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="titulo-seccion">
+      <h2>¿Qué es Indie Hoy?</h2>
+    </div>
+
+    <section id="uno">
+      <div class="parrafo">
+        <p>
+          Indie Hoy es un medio cultural virtual creado en 2008 con base en
+          Buenos Aires, Argentina.
+        </p>
+        <p>
+          Está principalmente dedicado a la crítica y comentarios de música,
+          noticias musicales y entrevistas a artistas, además de otros productos
+          culturales como cine, televisión y literatura. Es la guía fundamental
+          para entender lo que pasa en la escena cultural emergente de Argentina
+          y de Latinoamérica.
+        </p>
+      </div>
+      <div class="contenedor-degradado">
+        <img src="img/Imagen1.png" alt="Sticker de Indie Hoy" />
+        <div class="degradado"></div>
+      </div>
+    </section>
+
+    <div class="titulo-seccion">
+      <h2>¿Por qué nuestro Newsletter?</h2>
+    </div>
+
+    <section id="dos">
+      <div class="flex">
+        <div id="centrado">
+          <h4>Resumenes semanales</h4>
+          <p>
+            Una vez por semana te enviaremos por mail un resumen con las
+            noticias y notas que consideramos más relevantes para ti.
+          </p>
+        </div>
+        <div class="imagen-contenedor">
+          <img src="img/image 1.png" alt="Icono1" />
+        </div>
+      </div>
+
+      <div class="flex">
+        <div id="centrado">
+          <h4>Alerta de eventos cercanos</h4>
+          <p>
+            Con nuestras alertas, serás el primero en enterarte de los eventos
+            de tu agrado que se realizarán cerca de tu ubicación.
+          </p>
+        </div>
+        <div class="imagen-contenedor">
+          <img src="img/image 2.png" alt="Icono2" />
+        </div>
+      </div>
+
+      <div class="flex">
+        <div id="centrado">
+          <h4>Recomendaciones nuevas</h4>
+          <p>
+            Recibirás sugerencias de artistas y eventos similares a los que te
+            gustan, asi podrás descubrir nuevos intereses.
+          </p>
+        </div>
+        <div class="imagen-contenedor">
+          <img src="img/image 3.png" alt="Icono3" />
+        </div>
+      </div>
+    </section>
+
+    <div class="titulo-seccion">
+      <h2>No te vas a perder estos eventos</h2>
+    </div>
+
+    <section id="tres">
+      <img src="img/flyer1.png" alt="flyer1" />
+      <img src="img/flyer2.png" alt="flyer2" />
+      <img src="img/flyer3.png" alt="flyer3" />
+      <img src="img/flyer4.png" alt="flyer4" />
+      <img src="img/flyer5.png" alt="flyer5" />
+      <img src="img/flyer6.png" alt="flyer6" />
+
+      <div class="texto3">
+        <p>Suscríbete y te avisaremos de los eventos que ocurran cerca tuyo</p>
+      </div>
+
+      <img src="img/flyer7.png" alt="flyer7" />
+      <img src="img/flyer8.png" alt="flyer8" />
+      <img src="img/flyer9.png" alt="flyer9" />
+      <img src="img/flyer10.png" alt="flyer10" />
+      <img src="img/flyer11.png" alt="flyer11" />
+      <img src="img/flyer12.png" alt="flyer12" />
+    </section>
+
+    <section class="formulario-final">
+      <p>
+        ¿Ya te convencimos? Suscríbete a nuestro Newsletter para estar siempre
+        al tanto de las últimas noticias, eventos y recomendaciones
+        personalizadas.
+      </p>
+
+      <div class="flex-formulario-final">
+        <p>
+          Dejanos tu mail, una ciudad cercana, decidí que queres recibir, y
+          listo!
+        </p>
+        <form>
+          <div id="mailfinal">
+            <label for="mail">Mail:</label>
+            <input type="text" name="mail" id="maildos" required="true" />
+          </div>
+
+          <button type="button" class="boton-dos" id="abrirdos">
+            DAME ESE FORMULARIO
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer">
+        <img
+          src="img/logo-indiehoy-oscuro.png"
+          alt="Logo IndieHoy oscuro"
+          class="logo-oscuro"
+        />
+        <div id="redes">
+          <img src="img/X.png" alt="X" />
+          <img src="img/FB.png" alt="FB" />
+          <img src="img/IG.png" alt="IG" />
+          <img src="img/YuTu.png" alt="YouTube" />
+          <img src="img/TikTok.png" alt="TikTok" />
+        </div>
+
+        <div class="acercade">
+          <p>ACERCA DE INDIE HOY</p>
+          <p>CONTACTO</p>
+          <p>POLITICA DE PRIVACIDAD</p>
+        </div>
+
+        <p class="final">© 2024 Indie Hoy. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
